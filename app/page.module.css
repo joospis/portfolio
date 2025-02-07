@@ -1,168 +1,75 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
   font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, gray 1px, transparent 1px),
+    linear-gradient(to bottom, gray 1px, transparent 1px);
+    background-position: center center;
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
+  .a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
   }
+} */
 
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.section1 {
+  background: repeat url("/backgrounds/blue.webp");
+  background-size: 20em 20em;
+  position: relative;
+  --margin-bottom: 10em;
+  margin-bottom: var(--margin-bottom);
+  background-position: left bottom;
+}
+.section1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--margin-bottom);
+  background: inherit; /* Copy background properties */
+  transform: translateY(100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 94% 86%, 91% 100%, 87% 86%, 82% 99%, 78% 88%, 78% 99%, 76% 89%, 74% 97%, 71% 88%, 70% 100%, 66% 86%, 65% 96%, 61% 76%, 58% 84%, 54% 80%, 53% 94%, 46% 82%, 43% 65%, 43% 88%, 37% 100%, 36% 75%, 31% 82%, 30% 92%, 27% 73%, 26% 66%, 20% 74%, 21% 89%, 16% 90%, 16% 65%, 10% 71%, 10% 84%, 6% 92%, 5% 57%, 2% 71%, 0% 100%);
+  background-position: 0 0; /* Match the starting position */
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.section2{
+  background-color: transparent;
+  position: relative;
+}
+.section3 {
+  background: repeat url("/backgrounds/red.webp");
+  background-size: 20em 20em;
+  position: relative;
+  --margin-top: 9em;
+  margin-top: var(--margin-top);
+  background-position: left top;
+}
+.section3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--margin-top);
+  background: inherit; /* Copy background properties */
+  transform: translateY(-100%);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 94% 14%, 91% 0%, 87% 14%, 82% 1%, 78% 12%, 78% 1%, 76% 11%, 74% 3%, 71% 12%, 70% 0%, 66% 14%, 65% 4%, 61% 24%, 58% 16%, 54% 20%, 53% 6%, 46% 18%, 43% 35%, 43% 12%, 37% 0%, 36% 25%, 31% 18%, 30% 8%, 27% 27%, 26% 34%, 20% 26%, 21% 11%, 16% 10%, 16% 35%, 10% 29%, 10% 16%, 6% 8%, 5% 43%, 2% 29%, 0% 0%);
+}
+.section4{
+  background: repeat url("/backgrounds/floral.webp");
+  background-size: 30em 30em;
+  position: relative;
 }

@@ -1,0 +1,107 @@
+[
+  {
+    "fileName": "frame1.webp",
+    "bounds": {
+      "original": {
+        "height": 2983,
+        "width": 3589
+      },
+      "top": 429,
+      "left": 441,
+      "bottom": 412,
+      "right": 424,
+      "width": 2724,
+      "height": 2142
+    }
+  },
+  {
+    "fileName": "frame2.webp",
+    "bounds": {
+      "original": {
+        "height": 3024,
+        "width": 4032
+      },
+      "top": 504,
+      "left": 589,
+      "bottom": 526,
+      "right": 576,
+      "width": 2867,
+      "height": 1994
+    }
+  },
+  {
+    "fileName": "frame3.webp",
+    "bounds": {
+      "original": {
+        "height": 3024,
+        "width": 4032
+      },
+      "top": 237,
+      "left": 260,
+      "bottom": 243,
+      "right": 261,
+      "width": 3511,
+      "height": 2544
+    }
+  },
+  {
+    "fileName": "frame4.webp",
+    "bounds": {
+      "original": {
+        "height": 3024,
+        "width": 4032
+      },
+      "top": 347,
+      "left": 392,
+      "bottom": 343,
+      "right": 388,
+      "width": 3252,
+      "height": 2334
+    }
+  },
+  {
+    "fileName": "frame5.webp",
+    "bounds": {
+      "original": {
+        "height": 3024,
+        "width": 4032
+      },
+      "top": 383,
+      "left": 437,
+      "bottom": 397,
+      "right": 448,
+      "width": 3147,
+      "height": 2244
+    }
+  },
+  {
+    "fileName": "frame6.webp",
+    "bounds": {
+      "original": {
+        "height": 2248,
+        "width": 2666
+      },
+      "top": 231,
+      "left": 235,
+      "bottom": 252,
+      "right": 246,
+      "width": 2185,
+      "height": 1765
+    }
+  },
+  {
+    "fileName": "frame_cyber1.webp",
+    "bounds": {
+      "original": {
+        "height": 510,
+        "width": 674
+      },
+      "top": 46,
+      "left": 49,
+      "bottom": 46,
+      "right": 50,
+      "width": 575,
+      "height": 418
+    }
+  }
+]

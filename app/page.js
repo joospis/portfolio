@@ -1,95 +1,62 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import PictureFrame from "./components/picture-frame";
+import GlobalAudioControl from "./components/global-audio-control";
+import HouseLevel from "./components/house-level";
+import Project from "./components/project";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function House() {
+	function tilt() {
+		return (Math.random() - 0.5) * 2
+	}
+	return (
+		<div className={styles.page}>
+			<Header/>
+			<main>
+				<HouseLevel className={styles.section1} header="STOP MOTION">
+					<Project title="Joey The Tikki">
+						<PictureFrame tilt={-tilt()} frameFile="frame1.webp" src="quack"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+					<Project reversed title="Leg Man">
+						<PictureFrame tilt={tilt()} frameFile="frame2.webp" src="legman"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+					<Project title="Quack">
+						<PictureFrame tilt={-tilt()} frameFile="frame5.webp" src="quack"/>
+						<Project.Text>
+							This used the version of Big Boy Animator I rewrote to use WPF instead. The primary difficulty with this animation (besides sculpting 3 realistic looking ducks) was to have three simultaneous things happening every frame. From 2020-2022, I attended high school in New York and lived with the family of a staff member there. Her family owned 3 ducks which were the inspiration of the puppets. The recording was of my girlfriend.
+						</Project.Text>
+					</Project>
+				</HouseLevel>
+				<HouseLevel className={styles.section2} header="CODE">
+					<Project reversed title="This Site">
+						<PictureFrame tilt={tilt()} frameFile="frame_cyber1.webp" src="quack"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+				</HouseLevel>
+				<HouseLevel className={styles.section3} header="WOODWORKING">
+					<Project title="Big Table">
+						<PictureFrame tilt={tilt()} frameFile="frame4.webp" src="quack"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+					<Project reversed title="Picture Frames">
+						<PictureFrame tilt={-tilt()} frameFile="frame3.webp" src="quack"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+				</HouseLevel>
+				<HouseLevel className={styles.section4} header="HIKING">
+					<Project title="Big Table">
+						<PictureFrame tilt="-0.9" frameFile="frame2.webp" src="quack"/>
+						<Project.Text>test</Project.Text>
+					</Project>
+				</HouseLevel>
+			</main>
+			<Footer/>
+		</div>
+	);
 }
+
+
+

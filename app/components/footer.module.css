@@ -1,0 +1,19 @@
+.footer{
+    background-color: black;
+    min-height: 20vh;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    z-index: 2;
+    padding: 1em;
+}

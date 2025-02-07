@@ -1,0 +1,7 @@
+.slider {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}

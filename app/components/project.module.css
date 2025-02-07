@@ -1,0 +1,22 @@
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /*If you change this, change the media query*/
+    justify-content: center;
+    padding: 1.5em 0;
+}
+.textWrapper {
+    backdrop-filter: blur(100px) saturate(150%);
+    /* background: rgba(255, 255, 255, 0.5); */
+    width: 30em; /*If you change this, change the media query*/
+    padding: 2em;
+    border-radius: 20px;
+}
+.text{
+    color: black;
+}
+@media (max-width: 64em) { /*calculate what the max-width needs to be by adding the widths + gap of project children*/
+    .textWrapper {
+        order: 2;
+    }
+}
