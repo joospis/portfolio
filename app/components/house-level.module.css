@@ -1,0 +1,27 @@
+.body {
+    min-height: 300px; 
+    padding: 3em 1em; /*If you change this, change the media query in project.module.css*/
+}
+.header {
+    /* font-size: 80px; */
+    margin: 2em 0;
+    text-align: center;
+    white-space:nowrap;
+    /* color: aqua; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.letter {
+    transform: rotate(var(--tilt));
+    font-size: var(--size);
+    transform-origin: 50% 0%;
+    display: inline-block;
+    color: transparent;
+    text-shadow: rgba(0, 0, 0, 0.9) 0 0 0.2vw;
+}
+
+/* @media (max-width: 600px) {
+    .letter {
+        font-size: calc(var(--size) * 0.5);
+    }
+} */
