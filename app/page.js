@@ -65,7 +65,7 @@ export default function House() {
 							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn’t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. This game is the closest one of my games ever came to being finished. It was created using C# and Monogame.
 						</Project.Text>
 					</Project>
-					<Project reversed title="Cude Game">
+					<Project reversed title="Cube Game">
 						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
 						<Project.Text>
 							Cube Game is a game about a cube from outer space crashing into earth and trying to take over the world. You play as the cube. I started making the game in WPF but soon realized that it was definitely not designed for making games. I began to learn how to make games in Monogame, a C# video game framework. 
@@ -74,7 +74,7 @@ export default function House() {
 				</HouseLevel>
 				<HouseLevel className={styles.section3} header="WOODWORKING">
 					<Project title="Big Table">
-						<PictureFrame tilt={tilt() * -1} frameFile="frame4.webp" src="quack"/>
+						<PictureFrame tilt={tilt() * -1} frameFile="frame4.webp" src="bigtable"/>
 						<Project.Text>
 							At my high school, one of the graduation requirements is to complete an act of service. For my act of service, I decided to build a big table for the school. My philosophy regarding big tables is that they act as a bridge to welcome community interaction. By making a big table the centerpiece of a community space, people are encouraged to, even expected to, share the space and interact with one another. If an environment allows people to sit away from each other, it allows them to put up a wall between them and the rest of the people. Even though they may be physically close, they are completely isolated. 
 							<br/>
