@@ -133,5 +133,20 @@
       "width": 575,
       "height": 418
     }
+  },
+  {
+    "fileName": "frame_cyber2.webp",
+    "bounds": {
+      "original": {
+        "height": 510,
+        "width": 907
+      },
+      "top": 46,
+      "left": 66,
+      "bottom": 46,
+      "right": 67,
+      "width": 774,
+      "height": 418
+    }
   }
 ]

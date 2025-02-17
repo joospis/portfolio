@@ -43,7 +43,7 @@ export default function Header() {
         <br/>
         <span className={styles.big}>Portfolio</span>
       </h1>
-			<h2>If my brain was a house, these would be the pictures hanging on the walls</h2>
+			<h2>If my mind was a house, these would be the pictures hanging on the walls</h2>
 			<button className={styles.button} onClick={scroll}>
 				<ArrowSvg/>
 			</button>

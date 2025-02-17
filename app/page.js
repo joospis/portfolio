@@ -66,7 +66,7 @@ export default function House() {
 						</Project.Text>
 					</Project>
 					<Project reversed title="Cube Game">
-						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
+						<PictureFrame tilt={0} frameFile="frame_cyber2.webp" src="cubegame"/>
 						<Project.Text>
 							Cube Game is a game about a cube from outer space crashing into earth and trying to take over the world. You play as the cube. I started making the game in WPF but soon realized that it was definitely not designed for making games. I began to learn how to make games in Monogame, a C# video game framework. 
 						</Project.Text>
@@ -82,7 +82,7 @@ export default function House() {
 						</Project.Text>
 					</Project>
 					<Project reversed title="Picture Frames">
-						<PictureFrame tilt={tilt()} frameFile="frame3.webp" src="quack"/>
+						<PictureFrame tilt={tilt()} frameFile="frame3.webp" src="pictureframes"/>
 						<Project.Text>
 							For the past few Christmases, I have gifted people picture frames. I believe that the sentimentality of choosing a picture and the dedication of hand crafting the frame makes the gift priceless. As I get older, the more I realize that a good gift is not based on material worth or quantity, but rather something that makes the receiver smile.
 						</Project.Text>
