@@ -19,7 +19,7 @@ export default function House() {
 				<HouseLevel className={styles.section1} header="STOP MOTION">
 					<Project title="Joey The Tikki">
 						<PictureFrame tilt={tilt() * -1} frameFile="frame8.webp" src="tikki"/>
-						<Project.Text>In the Summer of 2019, I borrowed my sister's DSLR and got a free trial version of Dragonframe. This would be the beginning of my stop motion animation phase. I used an audio clip of Joey from Friends and a wooden Tikki built by my late step-grandfather.</Project.Text>
+						<Project.Text>In the Summer of 2019, I borrowed my sister's DSLR and got a free trial version of Dragonframe. This would be the beginning of my stop motion animation phase. I used an audio clip of Joey from Friends and a wooden Tikki built by my late grandfather.</Project.Text>
 					</Project>
 					<Project reversed title="Leg Man">
 						<PictureFrame tilt={tilt()} frameFile="frame2.webp" src="legman"/>
@@ -61,11 +61,15 @@ export default function House() {
 					</Project>
 					<Project title="Walk to the Waterhole">
 						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="wttw"/>
-						<Project.Text>test</Project.Text>
+						<Project.Text>
+							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn’t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. This game is the closest one of my games ever came to being finished. It was created using C# and Monogame.
+						</Project.Text>
 					</Project>
 					<Project reversed title="Cude Game">
 						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
-						<Project.Text>test</Project.Text>
+						<Project.Text>
+							Cube Game is a game about a cube from outer space crashing into earth and trying to take over the world. You play as the cube. I started making the game in WPF but soon realized that it was definitely not designed for making games. I began to learn how to make games in Monogame, a C# video game framework. 
+						</Project.Text>
 					</Project>
 				</HouseLevel>
 				<HouseLevel className={styles.section3} header="WOODWORKING">

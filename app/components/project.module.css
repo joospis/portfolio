@@ -27,6 +27,10 @@
 .text a {
     color:rgb(47, 113, 235);
 }
+.text p sup { 
+    vertical-align: super; 
+    line-height: 0;
+}
 .text p br {
     margin-bottom: 1rem;
 }

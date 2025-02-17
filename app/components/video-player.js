@@ -2,8 +2,9 @@ import React, { useRef, useEffect, forwardRef, useImperativeHandle } from 'react
 import Hls from 'hls.js'
 import styles from './video-player.module.css'
 
-const VideoPlayer = forwardRef(({ src }, ref) => {
+const VideoPlayer = forwardRef(({ src, thumbnail }, ref) => {
     const videoRef = useRef(null)
+    const posterRef = useRef(null)
 
     useEffect(() => {
         if (Hls.isSupported() && src) {
@@ -19,28 +20,31 @@ const VideoPlayer = forwardRef(({ src }, ref) => {
             return () => hls.destroy()
         } else if (videoRef.current?.canPlayType('application/vnd.apple.mpegurl')) {
             // Native HLS support (e.g., Safari)
-            videoRef.current.src = src + "#t=0.001"
+            // videoRef.current.src = src + "#t=0.001"
         }
     }, [src])
 
     useImperativeHandle(ref, () => ({
         play: () => {
             videoRef.current?.play()
+            posterRef.current.style.opacity = "0"
         },
         stop: () => {
             if (videoRef.current) {
                 videoRef.current.pause()
                 videoRef.current.currentTime = 0
+                posterRef.current.style.opacity = "1"
+                // videoRef.current.load() // This will reset the video and show the poster
             }
         },
         getVideoElement: () => videoRef.current
     }))
 
     return (
-        <video playsInline
-            ref={videoRef}
-            className={styles.HTMLVideo}
-        />
+        <>
+            <video playsInline ref={videoRef} className={styles.HTMLVideo}/>
+            <img ref={posterRef} className={styles.poster} src={thumbnail}/>
+        </>
     )
 })
 

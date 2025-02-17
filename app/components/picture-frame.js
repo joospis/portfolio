@@ -144,7 +144,7 @@ export default function PictureFrame(props){
             <div style={backgroundStyle} className={styles.background} onClick={close}></div>
             <div style={wrapperStyle} className={styles.wrapper} onClick={wrapperClick}>
                 <div className={styles.video} style={{height: videoHeight, width: videoWidth, top: videoTop, left: videoleft}}>
-                    <VideoPlayer ref={videoPlayerRef} src={`/hls/${props.src}/master.m3u8`}></VideoPlayer>
+                    <VideoPlayer ref={videoPlayerRef} src={`/hls/${props.src}/master.m3u8`} thumbnail={`/thumbnails/${props.src}.webp`}></VideoPlayer>
                 </div>
                 <Image
                     className={styles.frame}
