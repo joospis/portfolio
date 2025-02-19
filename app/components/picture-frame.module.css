@@ -39,8 +39,11 @@
     background-color: rgba(0, 0, 0, 0.8);
     left: 0;
     top: 0;
-    transition: 1s ease-in-out;
     opacity: 0;
     visibility: hidden;
     z-index: 99;
+}
+.cssTransitionsOnlyAfterPageLoad {
+    /* prevent safari from temporailiy displaying black on intial load */
+    transition: 1s ease-in-out;
 }

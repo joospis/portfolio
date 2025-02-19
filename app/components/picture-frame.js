@@ -18,6 +18,7 @@ export default function PictureFrame(props){
     const [isOpen, setIsOpen] = React.useState(false);
     const pictureFrameRef = React.useRef(null)
     const videoPlayerRef = React.useRef(null)
+    const backgroundRef = React.useRef(null)
     const [wrapperStyle, setWrapperStlye] = React.useState({transform: `rotate(${props.tilt}deg)`})
     const [pictureFrameStyle, setPictureFrameStlye] = React.useState({})
     const [backgroundStyle, setBackgroundStyle] = React.useState({})
@@ -49,6 +50,8 @@ export default function PictureFrame(props){
 
     //function opens frame
     async function wrapperClick(){
+        backgroundRef.current.className = `${styles.background} ${styles.cssTransitionsOnlyAfterPageLoad}`
+
         videoPlayerRef.current.play()
 
         const rect = pictureFrameRef.current.getBoundingClientRect();
@@ -141,7 +144,7 @@ export default function PictureFrame(props){
 
     return(
         <div ref={pictureFrameRef} style={pictureFrameStyle} className={styles.pictureFrame}>
-            <div style={backgroundStyle} className={styles.background} onClick={close}></div>
+            <div style={backgroundStyle} className={styles.background} onClick={close} ref={backgroundRef}></div>
             <div style={wrapperStyle} className={styles.wrapper} onClick={wrapperClick}>
                 <div className={styles.video} style={{height: videoHeight, width: videoWidth, top: videoTop, left: videoleft}}>
                     <VideoPlayer ref={videoPlayerRef} src={`/hls/${props.src}/master.m3u8`} thumbnail={`/thumbnails/${props.src}.webp`}></VideoPlayer>
