@@ -20,7 +20,7 @@ const VideoPlayer = forwardRef(({ src, thumbnail }, ref) => {
             return () => hls.destroy()
         } else if (videoRef.current?.canPlayType('application/vnd.apple.mpegurl')) {
             // Native HLS support (e.g., Safari)
-            // videoRef.current.src = src + "#t=0.001"
+            videoRef.current.src = src + "#t=0.001"
         }
     }, [src])
 
