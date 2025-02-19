@@ -40,13 +40,13 @@ export default function House() {
 				</HouseLevel>
 				<HouseLevel className={styles.section2} header="CODE">
 					<Project reversed title="This Site">
-						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
+						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="thissite"/>
 						<Project.Text>
 							This site was built using Next.js and is hosted as a static site on Cloudflare Pages. You can view the source code <a target="_blank" rel="noopener noreferrer" href="https://github.com/joospis/portfolio">here</a>. This is the third (and hopefully final) rewrite of this site because I was unhappy with the performance of the previous versions. I got the idea for this site after watching the credits scene for Wallace and Gromit in which there are pictures of Wallace and Gromit on a wall as the names are displayed. 
 						</Project.Text>
 					</Project>
 					<Project title="Big Boy Animator">
-						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
+						<PictureFrame tilt={0} frameFile="frame_cyber2.webp" src="bigboy"/>
 						<Project.Text>
 							Based on the desire to avoid spending $300 to buy Dragonframe, in the Spring of 2020, I started to make my own frame-grabbing software to work with my sister's DSLR. I had a lot of free time on my hands as this was the beginning of the pandemic. Initially, the software was made using C# and WinForms, however when I bought a new laptop later that year with a higher resolution display, I rewrote the software using WPF because WinForms does not support resolution independence. 
 							<br/>
