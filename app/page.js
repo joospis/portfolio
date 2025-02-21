@@ -96,7 +96,7 @@ export default function House() {
 						</Project.Text>
 					</Project>
 					<Project reversed title="Colorado Trail">
-						<PictureFrame tilt={tilt()} frameFile="frame1.webp" src="quack"/>
+						<PictureFrame tilt={tilt()} frameFile="frame1.webp" src="ct"/>
 						<Project.Text>
 						In 2024, after putting Sticky’s Resupply on hold, I set out on a new adventure—the Colorado Trail! Having never been to Colorado or tackled a long trail solo, I embraced the challenge of being fully self-reliant. Along the way, I accomplished something I hadn’t on the Appalachian Trail: hiking an ultramarathon in a single day. The Colorado Trail stretches 500 miles from Denver to Durango, filled with breathtaking scenery and unforgettable moments. I started on July 18<sup>th</sup> and crossed the finish line on August 17<sup>th</sup>, grateful for every step of the journey.						</Project.Text>
 					</Project>
