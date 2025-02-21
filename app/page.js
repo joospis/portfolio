@@ -90,16 +90,15 @@ export default function House() {
 				</HouseLevel>
 				<HouseLevel className={styles.section4} header="HIKING">
 					<Project title="Appalachian Trail">
-						<PictureFrame tilt={tilt() * -1} frameFile="frame6.webp" src="quack"/>
+						<PictureFrame tilt={tilt() * -1} frameFile="frame6.webp" src="at"/>
 						<Project.Text>
-							In 2023, my girlfriend and I set out to hike the entire Appalachian Trail. Starting at Springer Mountain, Georgia, and ending at Mt. Katahdin, Maine, the Appalachian Trail spans 2,200 miles. It takes most people 5-7 months to complete. After graduating high school in spring of 2022, I worked for a year to save for my journey, research, and purchase the necessary gear. Over the course of my hike I met amazing people, did what felt impossible, and rediscovered myself and the world around me. I started on March 8<sup>th</sup> and finished September 10<sup>th</sup>.
+							In 2023, my girlfriend and I embarked on a life-changing adventure to hike the entire Appalachian Trail. Beginning at Springer Mountain in Georgia and ending at Mt. Katahdin in Maine, the trail stretches 2,200 miles. Most hikers take 5-7 months to complete it, and we set out to do just that. After graduating high school in 2022, I spent a year saving, researching, and outfitting myself with the necessary gear. Along the way, I met incredible people, achieved what once seemed impossible, and rediscovered both myself and the beauty of the world around me. I started on March 8<sup>th</sup> and finished on September 10<sup>th</sup>.
 						</Project.Text>
 					</Project>
 					<Project reversed title="Colorado Trail">
 						<PictureFrame tilt={tilt()} frameFile="frame1.webp" src="quack"/>
 						<Project.Text>
-							In 2024, after ultimately deciding to put Sticky’s Resupply on an indefinite hold, I decided to hike the Colorado Trail to clear my head. Having never been to Colorado and never doing a long trail by myself, this time I was faced with being completely self-dependent. I successfully hiked an ultramarathon in one day, a goal I had not achieved on the Appalachian Trail. The Colorado trail spans 500 miles from Denver, CO, to Durango, CO. I started July 18<sup>th</sup> and finished August 17<sup>th</sup>.
-						</Project.Text>
+						In 2024, after putting Sticky’s Resupply on hold, I set out on a new adventure—the Colorado Trail! Having never been to Colorado or tackled a long trail solo, I embraced the challenge of being fully self-reliant. Along the way, I accomplished something I hadn’t on the Appalachian Trail: hiking an ultramarathon in a single day. The Colorado Trail stretches 500 miles from Denver to Durango, filled with breathtaking scenery and unforgettable moments. I started on July 18<sup>th</sup> and crossed the finish line on August 17<sup>th</sup>, grateful for every step of the journey.						</Project.Text>
 					</Project>
 				</HouseLevel>
 			</main>
