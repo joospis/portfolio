@@ -23,6 +23,9 @@
 # non HLS videos
 /videos/
 
+# unscaled images
+/unscaled-pictureframes/
+
 # misc
 .DS_Store
 *.pem
