@@ -154,7 +154,7 @@ export default function PictureFrame(props){
                 <div className={styles.video} style={{height: videoHeight, width: videoWidth, top: videoTop, left: videoleft}}>
                     <VideoPlayer ref={videoPlayerRef} src={`/hls/${props.src}/master.m3u8`} thumbnail={`/thumbnails/${props.src}.webp`}></VideoPlayer>
                 </div>
-                <Image
+                <img
                     className={styles.frame}
                     src={`/pictureframes/${props.frameFile}`}
                     width={data.bounds.width}
