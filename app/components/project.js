@@ -15,7 +15,11 @@ const Project = (props) => {
         </div>
     )
 }
-Project.Text = (props) => {
+Project.displayName = "Project"
+
+Project.Text = function ProjectText(props) {
     return(<>{props.children}</>)
 }
+Project.Text.displayName = "Project.Text"
+
 export default Project

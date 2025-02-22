@@ -47,5 +47,5 @@ const VideoPlayer = forwardRef(({ src, thumbnail }, ref) => {
         </>
     )
 })
-
+VideoPlayer.displayName = "VideoPlayer"
 export default VideoPlayer
