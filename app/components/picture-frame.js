@@ -19,6 +19,7 @@ export default function PictureFrame(props){
     const pictureFrameRef = React.useRef(null)
     const videoPlayerRef = React.useRef(null)
     const backgroundRef = React.useRef(null)
+    const clickMeRef = React.useRef(null)
     const [wrapperStyle, setWrapperStlye] = React.useState({transform: `rotate(${props.tilt}deg)`})
     const [pictureFrameStyle, setPictureFrameStlye] = React.useState({})
     const [backgroundStyle, setBackgroundStyle] = React.useState({})
@@ -50,6 +51,10 @@ export default function PictureFrame(props){
 
     //function opens frame
     async function wrapperClick(){
+        if (props.clickMe) {
+            clickMeRef.current.className = ""
+        }
+
         backgroundRef.current.className = `${styles.background} ${styles.cssTransitionsOnlyAfterPageLoad}`
 
         videoPlayerRef.current.play()
@@ -156,6 +161,10 @@ export default function PictureFrame(props){
                     height={data.bounds.height}
                     alt="Picture Frame"
                 />
+                <div className={props.clickMe ? styles.clickMe : "bar"} ref={clickMeRef}>
+
+                </div>
+
             </div>
         </div>
     );

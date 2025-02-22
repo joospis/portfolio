@@ -18,7 +18,7 @@ export default function House() {
 			<main>
 				<HouseLevel className={styles.section1} header="STOP MOTION">
 					<Project title="Joey The Tikki">
-						<PictureFrame tilt={tilt() * -1} frameFile="frame8.webp" src="tikki"/>
+						<PictureFrame clickMe tilt={tilt() * -1} frameFile="frame8.webp" src="tikki"/>
 						<Project.Text>In the Summer of 2019, I borrowed my sister's DSLR and got a free trial version of Dragonframe. This would be the beginning of my stop motion animation phase. I used an audio clip of Joey from Friends and a wooden Tikki built by my late grandfather.</Project.Text>
 					</Project>
 					<Project reversed title="Leg Man">
@@ -34,7 +34,7 @@ export default function House() {
 					<Project title="Quack">
 						<PictureFrame tilt={tilt() * -1} frameFile="frame5.webp" src="quack"/>
 						<Project.Text>
-							This used the version of Big Boy Animator I rewrote to use WPF instead. The primary difficulty with this animation (besides sculpting 3 realistic looking ducks) was to have three simultaneous things happening every frame. From 2020-2022, I attended high school in New York and lived with the family of a staff member there. Her family owned 3 ducks which were the inspiration of the puppets. The recording was of my girlfriend.
+							This used the version of Big Boy Animator I rewrote to use WPF instead. The primary difficulty with this animation (besides sculpting 3 realistic looking ducks) was to have three simultaneous things happening every frame. From 2020-2022, I attended high school in New York and lived with the family of a staff member there. Her family owned 3 ducks which were the inspiration of the puppets. The voice recording is of my girlfriend.
 						</Project.Text>
 					</Project>
 				</HouseLevel>
@@ -49,23 +49,15 @@ export default function House() {
 						<PictureFrame tilt={0} frameFile="frame_cyber2.webp" src="bigboy"/>
 						<Project.Text>
 							Based on the desire to avoid spending $300 to buy Dragonframe, in the Spring of 2020, I started to make my own frame-grabbing software to work with my sister's DSLR. I had a lot of free time on my hands as this was the beginning of the pandemic. Initially, the software was made using C# and WinForms, however when I bought a new laptop later that year with a higher resolution display, I rewrote the software using WPF because WinForms does not support resolution independence. 
-							<br/>
-							A while later, I started re-writing it with a GUI I made with Monogame. However, I didn't get far in the project.
 						</Project.Text>
 					</Project>
-					<Project reversed title="Sticky's Resupply">
-						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="quack"/>
-						<Project.Text>
-							After finishing my thru-hike of the Appalachian Trail in 2023, I returned with a vision for an ecommerce store that would let hikers mail their resupplies to themselves as they were hiking. The store has information regarding calories, caloric density, weight on the product cards as well as the meal planner as the cart. When selecting the shipping location, you could pick post offices or hostels along the long trail you were hiking. I ultimately decided against launching the service for the foreseeable future as I was struggling with feeling isolated and finding food distributors.
-						</Project.Text>
-					</Project>
-					<Project title="Walk to the Waterhole">
+					<Project reversed title="Walk to the Waterhole">
 						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="wttw"/>
 						<Project.Text>
-							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn’t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. This game is the closest one of my games ever came to being finished. It was created using C# and Monogame.
+							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn’t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. It was created using C# and Monogame.
 						</Project.Text>
 					</Project>
-					<Project reversed title="Cube Game">
+					<Project title="Cube Game">
 						<PictureFrame tilt={0} frameFile="frame_cyber2.webp" src="cubegame"/>
 						<Project.Text>
 							Cube Game is a game about a cube from outer space crashing into earth and trying to take over the world. You play as the cube. I started making the game in WPF but soon realized that it was definitely not designed for making games. I began to learn how to make games in Monogame, a C# video game framework. 
@@ -73,32 +65,33 @@ export default function House() {
 					</Project>
 				</HouseLevel>
 				<HouseLevel className={styles.section3} header="WOODWORKING">
-					<Project title="Big Table">
-						<PictureFrame tilt={tilt() * -1} frameFile="frame4.webp" src="bigtable"/>
+					<Project reversed title="Big Table">
+						<PictureFrame tilt={tilt()} frameFile="frame4.webp" src="bigtable"/>
 						<Project.Text>
 							At my high school, one of the graduation requirements is to complete an act of service. For my act of service, I decided to build a big table for the school. My philosophy regarding big tables is that they act as a bridge to welcome community interaction. By making a big table the centerpiece of a community space, people are encouraged to, even expected to, share the space and interact with one another. If an environment allows people to sit away from each other, it allows them to put up a wall between them and the rest of the people. Even though they may be physically close, they are completely isolated. 
 							<br/>
 							The table was built from materials primarily donated and was finished a few weeks prior to my graduation.
 						</Project.Text>
 					</Project>
-					<Project reversed title="Picture Frames">
-						<PictureFrame tilt={tilt()} frameFile="frame3.webp" src="pictureframes"/>
+					<Project title="Picture Frames">
+						<PictureFrame tilt={tilt() * -1} frameFile="frame3.webp" src="pictureframes"/>
 						<Project.Text>
 							For the past few Christmases, I have gifted people picture frames. I believe that the sentimentality of choosing a picture and the dedication of hand crafting the frame makes the gift priceless. As I get older, the more I realize that a good gift is not based on material worth or quantity, but rather something that makes the receiver smile.
 						</Project.Text>
 					</Project>
 				</HouseLevel>
 				<HouseLevel className={styles.section4} header="HIKING">
-					<Project title="Appalachian Trail">
-						<PictureFrame tilt={tilt() * -1} frameFile="frame6.webp" src="at"/>
+					<Project reversed title="Appalachian Trail">
+						<PictureFrame tilt={tilt()} frameFile="frame6.webp" src="at"/>
 						<Project.Text>
 							In 2023, my girlfriend and I embarked on a life-changing adventure to hike the entire Appalachian Trail. Beginning at Springer Mountain in Georgia and ending at Mt. Katahdin in Maine, the trail stretches 2,200 miles. Most hikers take 5-7 months to complete it, and we set out to do just that. After graduating high school in 2022, I spent a year saving, researching, and outfitting myself with the necessary gear. Along the way, I met incredible people, achieved what once seemed impossible, and rediscovered both myself and the beauty of the world around me. I started on March 8<sup>th</sup> and finished on September 10<sup>th</sup>.
 						</Project.Text>
 					</Project>
-					<Project reversed title="Colorado Trail">
-						<PictureFrame tilt={tilt()} frameFile="frame1.webp" src="ct"/>
+					<Project title="Colorado Trail">
+						<PictureFrame tilt={tilt() * -1} frameFile="frame1.webp" src="ct"/>
 						<Project.Text>
-						In 2024, after putting Sticky’s Resupply on hold, I set out on a new adventure—the Colorado Trail! Having never been to Colorado or tackled a long trail solo, I embraced the challenge of being fully self-reliant. Along the way, I accomplished something I hadn’t on the Appalachian Trail: hiking an ultramarathon in a single day. The Colorado Trail stretches 500 miles from Denver to Durango, filled with breathtaking scenery and unforgettable moments. I started on July 18<sup>th</sup> and crossed the finish line on August 17<sup>th</sup>, grateful for every step of the journey.						</Project.Text>
+							In 2024, I set out on a new adventure—the Colorado Trail! Having never been to Colorado or tackled a long trail solo, I embraced the challenge of being fully self-reliant. Along the way, I accomplished something I hadn’t on the Appalachian Trail: hiking an ultramarathon in a single day. The Colorado Trail stretches 500 miles from Denver to Durango, filled with breathtaking scenery and unforgettable moments. I started on July 18<sup>th</sup> and crossed the finish line on August 17<sup>th</sup>, grateful for every step of the journey.
+						</Project.Text>
 					</Project>
 				</HouseLevel>
 			</main>
