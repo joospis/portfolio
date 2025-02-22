@@ -3,4 +3,14 @@
     height: 100%;
     /* background-color: pink; */
     object-fit: cover;
+    position: relative;
+}
+.poster {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
 }

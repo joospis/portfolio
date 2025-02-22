@@ -8,7 +8,7 @@ const Project = (props) => {
             <div className={styles.textWrapper}>
                 <div className={styles.text}>
                     <h2>{props.title}</h2>
-                    {props.children.filter(child => child.type === Project.Text)[0]}
+                    <p>{props.children.filter(child => child.type === Project.Text)[0]}</p>
                 </div>
             </div>
             {props.reversed ? props.children.filter(child => child.type === PictureFrame)[0] : ""}

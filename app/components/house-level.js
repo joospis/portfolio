@@ -7,12 +7,12 @@ function Heading(props) {
     let spans = []
     for (const letter of letters){
         const randomTilt = Math.random() * 10 - 5
-        const randomSize = (Math.random() * 1- 0.5) + 5
+        const randomSize = (Math.random() * 1- 0.5) + 8
         const span = React.createElement('span', {
                 className: styles.letter, 
                 style: {
                     "--tilt" : randomTilt + "deg",
-                    "--size" : randomSize + "rem"
+                    "--size" : randomSize + "vw"
                 }
             }, 
             letter !== " " ? letter : "\u00A0"

@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: skyblue;
+    /* background-color: skyblue; */
+	background-color: deepskyblue;
+	background: linear-gradient(0deg, rgba(135,206,235,1) 19%, rgba(0,191,255,1) 65%);
     position: relative;
 	padding: 0 1em;
 	text-align: center;
@@ -16,11 +18,14 @@
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	/* filter: invert(100%); */
 }
+.big {
+	font-size: 10vw;
+}
 .header::before {
 	content: "";
-	/* position: fixed; */
+	position: absolute;
 
-	position: fixed;
+	/* position: fixed; */
 
 	display: block;
 	
@@ -37,8 +42,8 @@
 	/* z-index: -1; */
 }
 @keyframes move-cloud{
-	0% {background-position: 0% 20%; }
-	100% {background-position: 400vh 20%;}
+	0% {background-position: 50vh 20%; }
+	100% {background-position: 450vh 20%;}
 }
 .button{
     background: transparent;

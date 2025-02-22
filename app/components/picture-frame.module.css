@@ -1,6 +1,7 @@
 .pictureFrame {
     position: relative;
-    width: 30em; /*If you change this, change the media query in project.module.css*/
+    width: 30em;/*  If you change this, change the media query in project.module.css */
+    /* height: 30em; */
     position: relative;
     height: fit-content;
 }
@@ -26,7 +27,9 @@
 .frame {
     position: relative;
     max-width: 100%;
+    /* max-height: 30em; */
     width: 100%;
+    /* width: auto; */
     height: auto;
 }
 .background {
@@ -36,8 +39,20 @@
     background-color: rgba(0, 0, 0, 0.8);
     left: 0;
     top: 0;
-    transition: 1s ease-in-out;
     opacity: 0;
     visibility: hidden;
     z-index: 99;
+}
+.cssTransitionsOnlyAfterPageLoad {
+    /* prevent safari from temporailiy displaying black on intial load */
+    transition: 1s ease-in-out;
+}
+.clickMe {
+    top: -10%;
+    left: 55%;
+    width: 45%;
+    height: 45%;
+    position: absolute;
+    background-image: url("/clickme.svg");
+    background-size: 100% 100%;
 }

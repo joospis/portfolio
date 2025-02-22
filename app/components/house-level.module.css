@@ -8,6 +8,7 @@
     text-align: center;
     white-space:nowrap;
     /* color: aqua; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .letter {
@@ -16,11 +17,11 @@
     transform-origin: 50% 0%;
     display: inline-block;
     color: transparent;
-    text-shadow: rgba(0, 0, 0, 0.9) 0 0 2px;
+    text-shadow: rgba(0, 0, 0, 0.9) 0 0 0.2vw;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .letter {
         font-size: calc(var(--size) * 0.5);
     }
-}
+} */

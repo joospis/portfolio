@@ -90,6 +90,36 @@
     }
   },
   {
+    "fileName": "frame7.webp",
+    "bounds": {
+      "original": {
+        "height": 2063,
+        "width": 2070
+      },
+      "top": 318,
+      "left": 324,
+      "bottom": 321,
+      "right": 319,
+      "width": 1427,
+      "height": 1424
+    }
+  },
+  {
+    "fileName": "frame8.webp",
+    "bounds": {
+      "original": {
+        "height": 3024,
+        "width": 3024
+      },
+      "top": 317,
+      "left": 330,
+      "bottom": 318,
+      "right": 313,
+      "width": 2381,
+      "height": 2389
+    }
+  },
+  {
     "fileName": "frame_cyber1.webp",
     "bounds": {
       "original": {
@@ -101,6 +131,21 @@
       "bottom": 46,
       "right": 50,
       "width": 575,
+      "height": 418
+    }
+  },
+  {
+    "fileName": "frame_cyber2.webp",
+    "bounds": {
+      "original": {
+        "height": 510,
+        "width": 907
+      },
+      "top": 46,
+      "left": 66,
+      "bottom": 46,
+      "right": 67,
+      "width": 774,
       "height": 418
     }
   }
