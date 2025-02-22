@@ -19,7 +19,7 @@ export default function House() {
 				<HouseLevel className={styles.section1} header="STOP MOTION">
 					<Project title="Joey The Tikki">
 						<PictureFrame clickMe tilt={tilt() * -1} frameFile="frame8.webp" src="tikki"/>
-						<Project.Text>In the Summer of 2019, I borrowed my sister's DSLR and got a free trial version of Dragonframe. This would be the beginning of my stop motion animation phase. I used an audio clip of Joey from Friends and a wooden Tikki built by my late grandfather.</Project.Text>
+						<Project.Text>In the Summer of 2019, I borrowed my sister&#39;s DSLR and got a free trial version of Dragonframe. This would be the beginning of my stop motion animation phase. I used an audio clip of Joey from Friends and a wooden Tikki built by my late grandfather.</Project.Text>
 					</Project>
 					<Project reversed title="Leg Man">
 						<PictureFrame tilt={tilt()} frameFile="frame2.webp" src="legman"/>
@@ -28,7 +28,7 @@ export default function House() {
 							<br/>
 							This was more than merely a test of the software, however. I was also testing a post-production effect called masking, in which you overlay a frame or series of frames over a still background image and erase parts of the overlay to expose the background. In stop motion, this can be used to hide puppet supports allowing, for example, your characters to jump. 
 							<br/>
-							Although these were the technical motivations for making Leg Man, I don’t really know where the idea for the characters and story came from, only that I thought a creature with only a head and a leg would be funny.
+							Although these were the technical motivations for making Leg Man, I don&#39;t really know where the idea for the characters and story came from, only that I thought a creature with only a head and a leg would be funny.
 						</Project.Text>
 					</Project>
 					<Project title="Quack">
@@ -48,13 +48,13 @@ export default function House() {
 					<Project title="Big Boy Animator">
 						<PictureFrame tilt={0} frameFile="frame_cyber2.webp" src="bigboy"/>
 						<Project.Text>
-							Based on the desire to avoid spending $300 to buy Dragonframe, in the Spring of 2020, I started to make my own frame-grabbing software to work with my sister's DSLR. I had a lot of free time on my hands as this was the beginning of the pandemic. Initially, the software was made using C# and WinForms, however when I bought a new laptop later that year with a higher resolution display, I rewrote the software using WPF because WinForms does not support resolution independence. 
+							Based on the desire to avoid spending $300 to buy Dragonframe, in the Spring of 2020, I started to make my own frame-grabbing software to work with my sister&#39;s DSLR. I had a lot of free time on my hands as this was the beginning of the pandemic. Initially, the software was made using C# and WinForms, however when I bought a new laptop later that year with a higher resolution display, I rewrote the software using WPF because WinForms does not support resolution independence. 
 						</Project.Text>
 					</Project>
 					<Project reversed title="Walk to the Waterhole">
 						<PictureFrame tilt={0} frameFile="frame_cyber1.webp" src="wttw"/>
 						<Project.Text>
-							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn’t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. It was created using C# and Monogame.
+							Walk to the Waterhole started out as an attempt to make a tower defense game. Specifically, the game wasn&#39;t even a game, it was a path creation tool for the enemies. As I was playing around with it, I realized that it could be a game in itself. Thus, it became a reverse tower defense game, where you played as the character trying to avoid the towers. You play as a creature trying to get from your house to a pond, but along the way grotesque men try to kill you. You succeed in a level by successfully getting to the pond without being murdered. It was created using C# and Monogame.
 						</Project.Text>
 					</Project>
 					<Project title="Cube Game">
