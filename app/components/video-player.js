@@ -5,22 +5,37 @@ import styles from './video-player.module.css'
 const VideoPlayer = forwardRef(({ src, thumbnail }, ref) => {
     const videoRef = useRef(null)
     const posterRef = useRef(null)
+    const hlsRef = useRef(null)
+    const loadingRef = useRef(false)
 
     useEffect(() => {
+        const video = videoRef.current
+
         if (Hls.isSupported() && src) {
-            const hls = new Hls()
+            let hls = new Hls({
+                autoStartLoad: false
+            })
             hls.loadSource(src)
             hls.attachMedia(videoRef.current)
 
+            // Preload only the first second
             hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                // Uncomment if autoplay is required
-                // videoRef.current.play()
+                hls.startLoad(0) // Start loading from 0 seconds
+                setTimeout(() => hls.stopLoad(), 1000) // Stop loading after a short delay
             })
+
+            hlsRef.current = hls
 
             return () => hls.destroy()
         } else if (videoRef.current?.canPlayType('application/vnd.apple.mpegurl')) {
-            // Native HLS support (e.g., Safari)
-            videoRef.current.src = src + "#t=0.001"
+            // Native HLS handling for Apple devices
+            video.preload = 'metadata' // Load only metadata (not full video)
+            video.src = src
+            video.load() // Apply the preload behavior
+
+            video.onloadedmetadata = () => {
+                video.currentTime = 0.001 // Forces loading the first segment
+            }
         }
     }, [src])
 
@@ -28,6 +43,13 @@ const VideoPlayer = forwardRef(({ src, thumbnail }, ref) => {
         play: () => {
             videoRef.current?.play()
             posterRef.current.style.opacity = "0"
+
+            console.log(loadingRef.current)
+            if (!loadingRef.current) {
+                hlsRef.current?.startLoad()
+                loadingRef.current = true // Persist state
+            }
+            
         },
         stop: () => {
             if (videoRef.current) {
