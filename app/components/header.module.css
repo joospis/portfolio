@@ -18,8 +18,14 @@
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	/* filter: invert(100%); */
 }
+.header h1 {
+	font-size: min(5vw, 35px);
+}
+.header h2 {
+	font-size: min(3vw, 24px);
+}
 .big {
-	font-size: 10vw;
+	font-size: min(15vw, 155px);
 }
 .header::before {
 	content: "";
